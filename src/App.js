@@ -14,6 +14,7 @@ function App() {
       dispatch(getArticles());
     }
   }, []);
+  console.log(articles, 'articlesarticles');
 
   return (
     <>
