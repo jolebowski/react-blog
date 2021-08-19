@@ -11,13 +11,13 @@ export default function AddArticle() {
             <div className='grid grid-cols-2 gap-5'>
               <input
                 type='text'
-                class='border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2'
+                class='border border-blue-500 px-4 py-2 focus:outline-none focus:border-blue-500 col-span-2'
                 placeholder='Titre'
               />
               <textarea
                 cols='10'
                 rows='5'
-                className='border border-gray-500 px-4 py-2 focus:outline-none focus:border-blue-500 col-span-2'
+                className='border border-blue-500 px-4 py-2 focus:outline-none focus:border-blue-500 col-span-2'
                 placeholder='Ecrivez votre article...'
               ></textarea>
             </div>
