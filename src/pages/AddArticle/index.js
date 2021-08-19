@@ -10,9 +10,6 @@ export default function AddArticle() {
   });
 
   const dispatch = useDispatch();
-  // const titleArticle = useSelector((state) => ({
-  //   ...state.articles,
-  // }));
 
   const handleSubmit = (e) => {
     e.preventDefault();

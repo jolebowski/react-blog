@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Card from './components/Card';
 import { getArticles } from './redux/reducers/articleReducer';
 function App() {
@@ -14,7 +15,6 @@ function App() {
       dispatch(getArticles());
     }
   }, []);
-  console.log(articles, 'articlesarticles');
 
   return (
     <>
@@ -31,6 +31,17 @@ function App() {
                     {item.title}
                   </h1>
                   <p className='text-blue-300 text-sm	'>{item.body}</p>
+                  <Link
+                    className='block mt-1 text-lg leading-tight front-semibold text-gray-900'
+                    to={{
+                      pathname: `article/${item.title
+                        .replace(/\s+/g, '-')
+                        .trim()}`,
+                      state: { title: item.title, body: item.body },
+                    }}
+                  >
+                    Voir article +
+                  </Link>
                 </Card>
               );
             })}
